@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weight conversions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+    function check()
+    {
+      var x;
+      x=document.getElementById('kg').value;
+      if(isNaN(x) || x<=0){
+        window.alert("Enter number greater than zero");
+        }
+        else{
+          var num;
+      num=x*1000;
+      document.getElementById('grams').value=num;
+      num=x*2.2046;
+      document.getElementById('pounds').value=num;
+      num=x*1000000;
+      document.getElementById('milligrams').value=num;
+      num=x*0.00110231;
+      document.getElementById('Ton').value=num;
+      num=x*35.274;
+      document.getElementById('ounce').value=num;    
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="tit">WEIGHT CONVERTER</div>
+    <br>
+    <form align="center">
+        <table align="center">
+            <tr>
+                <td><label>Weight in KG:</label></td>
+                <td><input type="number" name="in_kg" id="kg"></td>
+                <td><input type="button"  name="submit" value="submit" onclick="check()"></td>
+            </tr>
+      
+      <tr>
+                <td><label>Kg to Grams:</label></td>
+                <td><input type="number" name="in_gr" id="grams"></td>
+                
+            </tr>
+      
+      <tr>
+                <td><label>Kg to Pounds:</label></td>
+                <td><input type="number" name="in_p" id="pounds"></td>
+                
+            </tr>
+      <tr>
+                <td><label>Kg to Milligrams:</label></td>
+                <td><input type="number" name="in_m" id="milligrams"></td>
+                
+            </tr>
+      <tr>
+                <td><label>Kg to Ton:</label></td>
+                <td><input type="number" name="in_t" id="Ton"></td>
+                
+            </tr>
+      <tr>
+                <td><label>Kg to Ounce:</label></td>
+                <td><input type="number" name="in_o" id="ounce"></td>
+                
+            </tr>
+        </table>
+    
+    <br>
+    <input type="reset" name="reset" value="RESET">
+    <p>you can press reset button for another conversion </p>
+    </form>
+</body>
+</html>
